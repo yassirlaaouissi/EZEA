@@ -1,0 +1,28 @@
+# Nmap 7.91 scan initiated Mon Mar 22 09:12:49 2021 as: /usr/bin/nmap -Pn -sCV -p913,5040,57621,60085 --open -oN nmap/Full_Extra_192.168.2.13.nmap --system-dns --stats-every 2s 192.168.2.13
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.000097s latency).
+
+PORT      STATE SERVICE     VERSION
+913/tcp   open  vmware-auth VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+5040/tcp  open  unknown
+57621/tcp open  unknown
+60085/tcp open  unknown
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, HTTPOptions, NULL, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, WMSRequest, ms-sql-s: 
+|_    {"type":"Tier1","version":"1.0"}
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port60085-TCP:V=7.91%I=7%D=3/22%Time=605897D1%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(HTTPOptions,2
+SF:2,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(DNSVersionBindReqT
+SF:CP,22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(SSLSessionReq,
+SF:22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(TLSSessionReq,22,
+SF:"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(SMBProgNeg,22,"{\"ty
+SF:pe\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(FourOhFourRequest,22,"{\"t
+SF:ype\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(SIPOptions,22,"{\"type\":
+SF:\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(WMSRequest,22,"{\"type\":\"Tier
+SF:1\",\"version\":\"1\.0\"}\r\n")%r(ms-sql-s,22,"{\"type\":\"Tier1\",\"ve
+SF:rsion\":\"1\.0\"}\r\n");
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 22 09:15:41 2021 -- 1 IP address (1 host up) scanned in 172.26 seconds

@@ -1,0 +1,19 @@
+[01;33m
+          _                                        
+  \      | |                              _         
+ _____   | | _____     ____ _____  ____ _| |_ _____ 
+(____ |  | |(____ |   / ___|____ |/ ___|_   _) ___ |
+/ ___ |  | |/ ___ |  ( (___/ ___ | |     | |_| ____|
+\ ____|   \_)_____|   \____)_____|_|      \__)_____)
+[01;90mAuthor: 4UT0M4T0N[00m
+
+Target has been set as 192.168.2.13
+
+[01;32m[1m===== Enumerating SMTP =====[00m
+
+[01;31m[1msudo python resources/smtp_enum.py 192.168.2.13 resources/users.txt[00m
+
+[>] Provided wordlist file with 1117 entries.
+[!] Connection failed with 192.168.2.13:25 - "timed out"
+
+

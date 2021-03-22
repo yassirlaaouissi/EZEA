@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Mar 22 09:14:31 2021 as: nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/udp_137_smb_nmap.txt&quot; -oX &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/udp_137_smb_nmap.xml&quot; 192.168.2.13 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/udp_137_smb_nmap.txt&quot; -oX &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/udp_137_smb_nmap.xml&quot; 192.168.2.13" start="1616418871" startstr="Mon Mar 22 09:14:31 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1616418872"/>
+<taskend task="NSE" time="1616418872"/>
+<taskbegin task="NSE" time="1616418872"/>
+<taskend task="NSE" time="1616418872"/>
+<taskbegin task="NSE" time="1616418872"/>
+<taskend task="NSE" time="1616418872"/>
+<taskbegin task="ARP Ping Scan" time="1616418872"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.13" addrtype="ipv4"/>
+<address addr="C8:D9:D2:EA:EE:6B" addrtype="mac" vendor="Hewlett Packard"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="ARP Ping Scan" time="1616418872" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1616418872"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1616418872"/>
+<taskbegin task="UDP Scan" time="1616418872"/>
+<taskend task="UDP Scan" time="1616418873" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1616418873"/>
+<taskend task="Service scan" time="1616418873" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1616418873"/>
+<taskend task="NSE" time="1616418873"/>
+<taskbegin task="NSE" time="1616418873"/>
+<taskend task="NSE" time="1616418873"/>
+<taskbegin task="NSE" time="1616418873"/>
+<taskend task="NSE" time="1616418873"/>
+<host starttime="1616418872" endtime="1616418873"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.13" addrtype="ipv4"/>
+<address addr="C8:D9:D2:EA:EE:6B" addrtype="mac" vendor="Hewlett Packard"/>
+<hostnames>
+<hostname name="desktop-nromt5i.home" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="0"/><service name="netbios-ns" product="Microsoft Windows netbios-ns" extrainfo="workgroup: WORKGROUP" hostname="DESKTOP-NROMT5I" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: DESKTOP-NROMT5I, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: c8:d9:d2:ea:ee:6b (Hewlett Packard)&#xa;Names:&#xa;  DESKTOP-NROMT5I&lt;00&gt;  Flags: &lt;unique&gt;&lt;active&gt;&#xa;  DESKTOP-NROMT5I&lt;20&gt;  Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  c8 d9 d2 ea ee 6b 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/></hostscript><times srtt="910" rttvar="5000" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1616418873"/>
+<taskend task="NSE" time="1616418873"/>
+<taskbegin task="NSE" time="1616418873"/>
+<taskend task="NSE" time="1616418873"/>
+<taskbegin task="NSE" time="1616418873"/>
+<taskend task="NSE" time="1616418873"/>
+<runstats><finished time="1616418873" timestr="Mon Mar 22 09:14:33 2021" summary="Nmap done at Mon Mar 22 09:14:33 2021; 1 IP address (1 host up) scanned in 1.66 seconds" elapsed="1.66" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,32 @@
+[*] ssl/https found on tcp/443.
+
+
+
+[*] ssl/vmware-auth found on tcp/903.
+
+
+
+[*] http found on tcp/5357.
+
+
+
+[*] netbios-ns found on udp/137.
+
+
+
+[*] vmware-auth found on tcp/913.
+
+
+
+[*] unknown found on tcp/5040.
+
+
+
+[*] unknown found on tcp/57621.
+
+
+
+[*] mongodb found on tcp/60085.
+
+
+

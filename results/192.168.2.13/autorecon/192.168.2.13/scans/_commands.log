@@ -1,0 +1,70 @@
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_quick_tcp_nmap.xml" 192.168.2.13
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_full_tcp_nmap.xml" 192.168.2.13
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_top_20_udp_nmap.xml" 192.168.2.13
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:443 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 443 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_http_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_443_https_nmap.xml" 192.168.2.13
+
+curl -sSik https://192.168.2.13:443/ -m 10 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_index.html"
+
+curl -sSik https://192.168.2.13:443/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://192.168.2.13:443/ /home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v https://192.168.2.13:443 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_whatweb.txt"
+
+nikto -ask=no -h https://192.168.2.13:443 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u https://192.168.2.13:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_gobuster.txt"; else gobuster dir -u https://192.168.2.13:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_https_gobuster.txt"; fi
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:903 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_903_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:5357 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5357 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_5357_http_nmap.xml" 192.168.2.13
+
+curl -sSik http://192.168.2.13:5357/ -m 10 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_index.html"
+
+curl -sSik http://192.168.2.13:5357/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.2.13:5357/ /home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.2.13:5357 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_whatweb.txt"
+
+nikto -ask=no -h http://192.168.2.13:5357 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://192.168.2.13:5357/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_gobuster.txt"; else gobuster dir -u http://192.168.2.13:5357/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5357_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:137 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/udp_137_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/udp_137_smb_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/udp_137_smb_nmap.xml" 192.168.2.13
+
+enum4linux -a -M -l -d 192.168.2.13 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/enum4linux.txt"
+
+nbtscan -rvh 192.168.2.13 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/nbtscan.txt"
+
+smbmap -H 192.168.2.13 -P 137 2>&1 | tee -a "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.2.13 -P 137 2>&1 | tee -a "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.2.13 -P 137 -R 2>&1 | tee -a "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.2.13 -P 137 -R 2>&1 | tee -a "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.2.13 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.2.13 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:913 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_913_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:5040 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_5040_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:57621 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_57621_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.2.13:60085 2>&1 | tee "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_60085_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 60085 --script="banner,(mongodb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_60085_mongodb_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_60085_mongodb_nmap.xml" 192.168.2.13
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_quick_tcp_nmap.xml" 192.168.2.13
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_full_tcp_nmap.xml" 192.168.2.13
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_top_20_udp_nmap.xml" 192.168.2.13
+

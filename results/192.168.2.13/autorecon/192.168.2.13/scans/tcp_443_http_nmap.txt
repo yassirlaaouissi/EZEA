@@ -1,0 +1,203 @@
+# Nmap 7.91 scan initiated Mon Mar 22 09:13:45 2021 as: nmap -vv --reason -Pn -sV -p 443 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_http_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_443_https_nmap.xml" 192.168.2.13
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up, received arp-response (0.00014s latency).
+Scanned at 2021-03-22 09:13:46 EDT for 208s
+
+PORT    STATE SERVICE   REASON          VERSION
+443/tcp open  ssl/https syn-ack ttl 128 VMware Workstation SOAP API 16.1.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Mon, 22 Mar 2021 13:13:58 GMT
+|     Connection: close
+|     Content-Security-Policy: block-all-mixed-content
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Mon, 22 Mar 2021 13:13:58 GMT
+|     Connection: close
+|     Content-Security-Policy: block-all-mixed-content
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.1 501 Not Implemented
+|     Date: Mon, 22 Mar 2021 13:13:58 GMT
+|     Connection: close
+|     Content-Security-Policy: block-all-mixed-content
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Mon, 22 Mar 2021 13:14:08 GMT
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 50
+|     <HTML><BODY><H1>400 Bad Request</H1></BODY></HTML>
+|   SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Mon, 22 Mar 2021 13:15:16 GMT
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 50
+|_    <HTML><BODY><H1>400 Bad Request</H1></BODY></HTML>
+|_http-chrono: Request times for /; avg: 154.72ms; min: 153.26ms; max: 155.76ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Mon, 22 Mar 2021 13:16:09 GMT; 0s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=desktop-nromt5i.home
+|   Found the following error pages: 
+|   
+|   Error Code: 403
+|_  	https://desktop-nromt5i.home:443/
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Mon, 22 Mar 2021 13:16:10 GMT
+|   Connection: close
+|   Content-Security-Policy: block-all-mixed-content
+|   Content-Type: text/plain; charset=utf-8
+|   Strict-Transport-Security: max-age=31536000
+|   X-Content-Type-Options: nosniff
+|   X-Frame-Options: DENY
+|   X-XSS-Protection: 1
+|   Content-Length: 0
+|   
+|_  (Request type: GET)
+|_http-iis-webdav-vuln: WebDAV is DISABLED. Server is not currently vulnerable.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|     Header: Strict-Transport-Security: max-age=31536000
+|   X_Frame_Options: 
+|     Header: X-Frame-Options: DENY
+|     Description: The browser must not display this content in any frame.
+|   X_XSS_Protection: 
+|     Header: X-XSS-Protection: 1
+|   X_Content_Type_Options: 
+|     Header: X-Content-Type-Options: nosniff
+|     Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. 
+|   Content_Security_Policy: 
+|     Header: Content-Security-Policy: block-all-mixed-content
+|_    Description: Prevent user agent from loading mixed content.
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| http-useragent-tester: 
+|   Status for browser useragent: 403
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 403
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| ssl-cert: Subject: commonName=VMware/countryName=US/organizationalUnitName=VMware/emailAddress=none@vmware.com/localityName=Palo Alto
+| Issuer: commonName=VMware/countryName=US/organizationalUnitName=VMware/emailAddress=none@vmware.com/localityName=Palo Alto
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-04-08T15:06:06
+| Not valid after:  2021-04-08T15:06:06
+| MD5:   ccae 2c6e 23bf 7989 3e21 f149 787d 5d2d
+| SHA-1: f9cf 67b4 0ab6 d9fd 4aaf 6fb9 26e6 490a fd46 fe33
+| -----BEGIN CERTIFICATE-----
+| MIIEEjCCAvqgAwIBAgIJAOWrH4khqSG8MA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNV
+| BAYTAlVTMRIwEAYDVQQHDAlQYWxvIEFsdG8xDzANBgNVBAsMBlZNd2FyZTEPMA0G
+| A1UEAwwGVk13YXJlMR4wHAYJKoZIhvcNAQkBFg9ub25lQHZtd2FyZS5jb20wHhcN
+| MjAwNDA4MTUwNjA2WhcNMjEwNDA4MTUwNjA2WjBjMQswCQYDVQQGEwJVUzESMBAG
+| A1UEBwwJUGFsbyBBbHRvMQ8wDQYDVQQLDAZWTXdhcmUxDzANBgNVBAMMBlZNd2Fy
+| ZTEeMBwGCSqGSIb3DQEJARYPbm9uZUB2bXdhcmUuY29tMIIBIjANBgkqhkiG9w0B
+| AQEFAAOCAQ8AMIIBCgKCAQEAsDaQAnquSywfs31TFXXRGgUD5WGe7bDBbT+X0KwV
+| fsL80wccmOOIJAkSPkAAGl7nSgLfI29pNrLHHJUHQlS7K5oOwZ0AbX09gKASkAeH
+| KE+77vYuWSeylnKkQVbYy3snSYiI3ZotRp8yUEQd1PQ9ViTa+ETg8OtUT1ZRraAG
+| hI+jNSGyTyYlnRdydhX6GDsWl0HWlS/g98kvOdu9qmxej3khMfmibVuuepcy96p6
+| BsX9vcFDImG0HntCUZ5BNAKYBpMjeqClB9gFjVqYVcJWoQiKTF/9Uet87MZQJsSr
+| +uGtq8qZuePXX69d+ctD0P7PrRC/d2ixx7hsX/tBO7phnwIDAQABo4HIMIHFMB0G
+| A1UdDgQWBBQEhoZCz/yg//M2RD31d+8sZvhnXDCBlQYDVR0jBIGNMIGKgBQEhoZC
+| z/yg//M2RD31d+8sZvhnXKFnpGUwYzELMAkGA1UEBhMCVVMxEjAQBgNVBAcMCVBh
+| bG8gQWx0bzEPMA0GA1UECwwGVk13YXJlMQ8wDQYDVQQDDAZWTXdhcmUxHjAcBgkq
+| hkiG9w0BCQEWD25vbmVAdm13YXJlLmNvbYIJAOWrH4khqSG8MAwGA1UdEwQFMAMB
+| Af8wDQYJKoZIhvcNAQELBQADggEBABVlyU3y54VPNYC0q0FlQZsE1k2ec6D/AsV+
+| uUuQne+T/8LszoyE3ANXrpki+PjLPMNNNBLsyhKF1vMn3jEqUBOzmw4t0r39JASb
+| TM2gn3rYsjUDxZ9t5PdKqo+AV5rCr9MqE6Z/Dhm9xbgo3J2+yomRj0bdxI4J63NI
+| h0PsYGqn8V1BoUKXm1aAHWL2F5z/anjJVeXhNUSnDf3B50YyAIxVwlE4es1V++8G
+| 3iQOd1KHWazARg2cfQxER5Bk0DYbcJSa5+ubRBf0Mk6uBJ5cdt1m7sb/FbJtgyBF
+| 7OgbZw/W0xEPavnpmIIO3MxS6yxf5IzgNcV8hjpobtnrXIKf2gM=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|_  least strength: A
+|_sslv2-drown: 
+| vmware-version: 
+|   Server version: VMware Workstation 16.1.0
+|   Build: 17198959
+|   Locale version: INTL  
+|   OS type: win32-x86
+|_  Product Line ID: ws
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+Service Info: CPE: cpe:/o:vmware:Workstation:16.1.0
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 22 09:17:14 2021 -- 1 IP address (1 host up) scanned in 209.35 seconds

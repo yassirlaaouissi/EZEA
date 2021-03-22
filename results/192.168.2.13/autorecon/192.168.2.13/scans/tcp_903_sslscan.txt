@@ -1,0 +1,29 @@
+Version: 2.0.8-static
+OpenSSL 1.1.1k-dev  xx XXX xxxx
+
+Connected to 192.168.2.13
+
+Testing SSL server 192.168.2.13 on port 903 using SNI name 192.168.2.13
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     disabled
+TLSv1.0   disabled
+TLSv1.1   disabled
+TLSv1.2   disabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Connection failed - unable to determine TLS Fallback SCSV support
+
+  TLS renegotiation:
+Session renegotiation not supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+
+  Supported Server Cipher(s):
+Certificate information cannot be retrieved.
+

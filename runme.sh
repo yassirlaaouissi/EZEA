@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]
+	then 	
+	   echo "Please run as root"
+	   echo "Usage: sudo ./runme.sh <IP-Address>"
+else
+	if [ $# -eq 1 ]
+  		then
+    			sudo tilix --focus-window --maximize -x "./enum.sh $1"
+	else
+        	echo "No arguments supplied"
+       		echo "Usage: sudo ./runme.sh <IP-Address>"
+	fi
+fi
+
+
+

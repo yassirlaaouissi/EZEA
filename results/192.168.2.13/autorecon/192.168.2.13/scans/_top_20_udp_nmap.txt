@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Mon Mar 22 10:21:11 2021 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_top_20_udp_nmap.xml" 192.168.2.13

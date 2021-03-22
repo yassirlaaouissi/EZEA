@@ -1,0 +1,19 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.2.13
++ Target Hostname:    192.168.2.13
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /C=US/L=Palo Alto/OU=VMware/CN=VMware/emailAddress=none@vmware.com
+                   Ciphers:  ECDHE-RSA-AES256-GCM-SHA384
+                   Issuer:   /C=US/L=Palo Alto/OU=VMware/CN=VMware/emailAddress=none@vmware.com
++ Start Time:         2021-03-22 09:13:46 (GMT-4)
+---------------------------------------------------------------------------
++ Server: No banner retrieved
++ The site uses SSL and Expect-CT header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Hostname '192.168.2.13' does not match certificate's names: VMware
++ 7931 requests: 16 error(s) and 2 item(s) reported on remote host
++ End Time:           2021-03-22 09:15:37 (GMT-4) (111 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

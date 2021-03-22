@@ -1,0 +1,74 @@
+# Nmap 7.91 scan initiated Mon Mar 22 09:06:01 2021 as: /usr/bin/nmap -Pn -sCV -p443,903,5357 --open -oN nmap/Script_192.168.2.13.nmap --system-dns --stats-every 2s 192.168.2.13
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.00012s latency).
+
+PORT     STATE SERVICE         VERSION
+443/tcp  open  ssl/https       VMware Workstation SOAP API 16.1.0
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Mon, 22 Mar 2021 13:06:14 GMT
+|     Connection: close
+|     Content-Security-Policy: block-all-mixed-content
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Date: Mon, 22 Mar 2021 13:06:14 GMT
+|     Connection: close
+|     Content-Security-Policy: block-all-mixed-content
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   HTTPOptions: 
+|     HTTP/1.1 501 Not Implemented
+|     Date: Mon, 22 Mar 2021 13:06:14 GMT
+|     Connection: close
+|     Content-Security-Policy: block-all-mixed-content
+|     Content-Type: text/plain; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000
+|     X-Content-Type-Options: nosniff
+|     X-Frame-Options: DENY
+|     X-XSS-Protection: 1
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Mon, 22 Mar 2021 13:06:24 GMT
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 50
+|     <HTML><BODY><H1>400 Bad Request</H1></BODY></HTML>
+|   SIPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Mon, 22 Mar 2021 13:07:32 GMT
+|     Connection: close
+|     Content-Type: text/html
+|     Content-Length: 50
+|_    <HTML><BODY><H1>400 Bad Request</H1></BODY></HTML>
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| ssl-cert: Subject: commonName=VMware/countryName=US
+| Not valid before: 2020-04-08T15:06:06
+|_Not valid after:  2021-04-08T15:06:06
+|_ssl-date: TLS randomness does not represent time
+| vmware-version: 
+|   Server version: VMware Workstation 16.1.0
+|   Build: 17198959
+|   Locale version: INTL  
+|   OS type: win32-x86
+|_  Product Line ID: ws
+903/tcp  open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+5357/tcp open  http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+Service Info: OS: Windows; CPE: cpe:/o:vmware:Workstation:16.1.0, cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 22 09:08:22 2021 -- 1 IP address (1 host up) scanned in 141.08 seconds

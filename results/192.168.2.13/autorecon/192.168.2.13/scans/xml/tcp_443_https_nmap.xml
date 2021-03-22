@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Mon Mar 22 09:13:45 2021 as: nmap -vv -&#45;reason -Pn -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_http_nmap.txt&quot; -oX &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_443_https_nmap.xml&quot; 192.168.2.13 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_443_http_nmap.txt&quot; -oX &quot;/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_443_https_nmap.xml&quot; 192.168.2.13" start="1616418825" startstr="Mon Mar 22 09:13:45 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="443"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1616418826"/>
+<taskend task="NSE" time="1616418826"/>
+<taskbegin task="NSE" time="1616418826"/>
+<taskend task="NSE" time="1616418826"/>
+<taskbegin task="NSE" time="1616418826"/>
+<taskend task="NSE" time="1616418826"/>
+<taskbegin task="ARP Ping Scan" time="1616418826"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.13" addrtype="ipv4"/>
+<address addr="C8:D9:D2:EA:EE:6B" addrtype="mac" vendor="Hewlett Packard"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="ARP Ping Scan" time="1616418826" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1616418826"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1616418826"/>
+<taskbegin task="SYN Stealth Scan" time="1616418826"/>
+<taskend task="SYN Stealth Scan" time="1616418826" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1616418826"/>
+<taskend task="Service scan" time="1616418966" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1616418966"/>
+<taskprogress task="NSE" time="1616418997" percent="99.67" remaining="1" etc="1616418997"/>
+<taskprogress task="NSE" time="1616419027" percent="99.67" remaining="1" etc="1616419027"/>
+<taskend task="NSE" time="1616419029"/>
+<taskbegin task="NSE" time="1616419029"/>
+<taskend task="NSE" time="1616419034"/>
+<taskbegin task="NSE" time="1616419034"/>
+<taskend task="NSE" time="1616419034"/>
+<host starttime="1616418826" endtime="1616419034"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.13" addrtype="ipv4"/>
+<address addr="C8:D9:D2:EA:EE:6B" addrtype="mac" vendor="Hewlett Packard"/>
+<hostnames>
+<hostname name="desktop-nromt5i.home" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="https" product="VMware Workstation SOAP API" version="16.1.0" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:vmware:Workstation:16.1.0</cpe></service><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Date: Mon, 22 Mar 2021 13:13:58 GMT&#xa;    Connection: close&#xa;    Content-Security-Policy: block-all-mixed-content&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Strict-Transport-Security: max-age=31536000&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: DENY&#xa;    X-XSS-Protection: 1&#xa;    Content-Length: 0&#xa;  GetRequest: &#xa;    HTTP/1.1 403 Forbidden&#xa;    Date: Mon, 22 Mar 2021 13:13:58 GMT&#xa;    Connection: close&#xa;    Content-Security-Policy: block-all-mixed-content&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Strict-Transport-Security: max-age=31536000&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: DENY&#xa;    X-XSS-Protection: 1&#xa;    Content-Length: 0&#xa;  HTTPOptions: &#xa;    HTTP/1.1 501 Not Implemented&#xa;    Date: Mon, 22 Mar 2021 13:13:58 GMT&#xa;    Connection: close&#xa;    Content-Security-Policy: block-all-mixed-content&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Strict-Transport-Security: max-age=31536000&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: DENY&#xa;    X-XSS-Protection: 1&#xa;    Content-Length: 0&#xa;  RTSPRequest: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Date: Mon, 22 Mar 2021 13:14:08 GMT&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    Content-Length: 50&#xa;    &lt;HTML&gt;&lt;BODY&gt;&lt;H1&gt;400 Bad Request&lt;/H1&gt;&lt;/BODY&gt;&lt;/HTML&gt;&#xa;  SIPOptions: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Date: Mon, 22 Mar 2021 13:15:16 GMT&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    Content-Length: 50&#xa;    &lt;HTML&gt;&lt;BODY&gt;&lt;H1&gt;400 Bad Request&lt;/H1&gt;&lt;/BODY&gt;&lt;/HTML&gt;"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Date: Mon, 22 Mar 2021 13:13:58 GMT&#xa;    Connection: close&#xa;    Content-Security-Policy: block-all-mixed-content&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Strict-Transport-Security: max-age=31536000&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: DENY&#xa;    X-XSS-Protection: 1&#xa;    Content-Length: 0</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 403 Forbidden&#xa;    Date: Mon, 22 Mar 2021 13:13:58 GMT&#xa;    Connection: close&#xa;    Content-Security-Policy: block-all-mixed-content&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Strict-Transport-Security: max-age=31536000&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: DENY&#xa;    X-XSS-Protection: 1&#xa;    Content-Length: 0</elem>
+<elem key="HTTPOptions">&#xa;    HTTP/1.1 501 Not Implemented&#xa;    Date: Mon, 22 Mar 2021 13:13:58 GMT&#xa;    Connection: close&#xa;    Content-Security-Policy: block-all-mixed-content&#xa;    Content-Type: text/plain; charset=utf-8&#xa;    Strict-Transport-Security: max-age=31536000&#xa;    X-Content-Type-Options: nosniff&#xa;    X-Frame-Options: DENY&#xa;    X-XSS-Protection: 1&#xa;    Content-Length: 0</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Date: Mon, 22 Mar 2021 13:14:08 GMT&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    Content-Length: 50&#xa;    &lt;HTML&gt;&lt;BODY&gt;&lt;H1&gt;400 Bad Request&lt;/H1&gt;&lt;/BODY&gt;&lt;/HTML&gt;</elem>
+<elem key="SIPOptions">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Date: Mon, 22 Mar 2021 13:15:16 GMT&#xa;    Connection: close&#xa;    Content-Type: text/html&#xa;    Content-Length: 50&#xa;    &lt;HTML&gt;&lt;BODY&gt;&lt;H1&gt;400 Bad Request&lt;/H1&gt;&lt;/BODY&gt;&lt;/HTML&gt;</elem>
+</script><script id="http-chrono" output="Request times for /; avg: 154.72ms; min: 153.26ms; max: 155.76ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Mon, 22 Mar 2021 13:16:09 GMT; 0s from local time."><elem key="date">2021-03-22T13:16:09+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=desktop-nromt5i.home&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 403&#xa;  &#x9;https://desktop-nromt5i.home:443/&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Mon, 22 Mar 2021 13:16:10 GMT&#xa;  Connection: close&#xa;  Content-Security-Policy: block-all-mixed-content&#xa;  Content-Type: text/plain; charset=utf-8&#xa;  Strict-Transport-Security: max-age=31536000&#xa;  X-Content-Type-Options: nosniff&#xa;  X-Frame-Options: DENY&#xa;  X-XSS-Protection: 1&#xa;  Content-Length: 0&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-iis-webdav-vuln" output="WebDAV is DISABLED. Server is not currently vulnerable."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    Header: Strict-Transport-Security: max-age=31536000&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: DENY&#xa;    Description: The browser must not display this content in any frame.&#xa;  X_XSS_Protection: &#xa;    Header: X-XSS-Protection: 1&#xa;  X_Content_Type_Options: &#xa;    Header: X-Content-Type-Options: nosniff&#xa;    Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. &#xa;  Content_Security_Policy: &#xa;    Header: Content-Security-Policy: block-all-mixed-content&#xa;    Description: Prevent user agent from loading mixed content."><table key="Strict_Transport_Security">
+<elem>Header: Strict-Transport-Security: max-age=31536000</elem>
+</table>
+<table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: DENY</elem>
+<elem>Description: The browser must not display this content in any frame.</elem>
+</table>
+<table key="X_XSS_Protection">
+<elem>Header: X-XSS-Protection: 1</elem>
+</table>
+<table key="X_Content_Type_Options">
+<elem>Header: X-Content-Type-Options: nosniff</elem>
+<elem>Description: Will prevent the browser from MIME-sniffing a response away from the declared content-type. </elem>
+</table>
+<table key="Content_Security_Policy">
+<elem>Header: Content-Security-Policy: block-all-mixed-content</elem>
+<elem>Description: Prevent user agent from loading mixed content.</elem>
+</table>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/plain; charset=utf-8)."></script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 403&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">403</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 403"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="ssl-cert" output="Subject: commonName=VMware/countryName=US/organizationalUnitName=VMware/emailAddress=none@vmware.com/localityName=Palo Alto&#xa;Issuer: commonName=VMware/countryName=US/organizationalUnitName=VMware/emailAddress=none@vmware.com/localityName=Palo Alto&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-04-08T15:06:06&#xa;Not valid after:  2021-04-08T15:06:06&#xa;MD5:   ccae 2c6e 23bf 7989 3e21 f149 787d 5d2d&#xa;SHA-1: f9cf 67b4 0ab6 d9fd 4aaf 6fb9 26e6 490a fd46 fe33&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEEjCCAvqgAwIBAgIJAOWrH4khqSG8MA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNV&#xa;BAYTAlVTMRIwEAYDVQQHDAlQYWxvIEFsdG8xDzANBgNVBAsMBlZNd2FyZTEPMA0G&#xa;A1UEAwwGVk13YXJlMR4wHAYJKoZIhvcNAQkBFg9ub25lQHZtd2FyZS5jb20wHhcN&#xa;MjAwNDA4MTUwNjA2WhcNMjEwNDA4MTUwNjA2WjBjMQswCQYDVQQGEwJVUzESMBAG&#xa;A1UEBwwJUGFsbyBBbHRvMQ8wDQYDVQQLDAZWTXdhcmUxDzANBgNVBAMMBlZNd2Fy&#xa;ZTEeMBwGCSqGSIb3DQEJARYPbm9uZUB2bXdhcmUuY29tMIIBIjANBgkqhkiG9w0B&#xa;AQEFAAOCAQ8AMIIBCgKCAQEAsDaQAnquSywfs31TFXXRGgUD5WGe7bDBbT+X0KwV&#xa;fsL80wccmOOIJAkSPkAAGl7nSgLfI29pNrLHHJUHQlS7K5oOwZ0AbX09gKASkAeH&#xa;KE+77vYuWSeylnKkQVbYy3snSYiI3ZotRp8yUEQd1PQ9ViTa+ETg8OtUT1ZRraAG&#xa;hI+jNSGyTyYlnRdydhX6GDsWl0HWlS/g98kvOdu9qmxej3khMfmibVuuepcy96p6&#xa;BsX9vcFDImG0HntCUZ5BNAKYBpMjeqClB9gFjVqYVcJWoQiKTF/9Uet87MZQJsSr&#xa;+uGtq8qZuePXX69d+ctD0P7PrRC/d2ixx7hsX/tBO7phnwIDAQABo4HIMIHFMB0G&#xa;A1UdDgQWBBQEhoZCz/yg//M2RD31d+8sZvhnXDCBlQYDVR0jBIGNMIGKgBQEhoZC&#xa;z/yg//M2RD31d+8sZvhnXKFnpGUwYzELMAkGA1UEBhMCVVMxEjAQBgNVBAcMCVBh&#xa;bG8gQWx0bzEPMA0GA1UECwwGVk13YXJlMQ8wDQYDVQQDDAZWTXdhcmUxHjAcBgkq&#xa;hkiG9w0BCQEWD25vbmVAdm13YXJlLmNvbYIJAOWrH4khqSG8MAwGA1UdEwQFMAMB&#xa;Af8wDQYJKoZIhvcNAQELBQADggEBABVlyU3y54VPNYC0q0FlQZsE1k2ec6D/AsV+&#xa;uUuQne+T/8LszoyE3ANXrpki+PjLPMNNNBLsyhKF1vMn3jEqUBOzmw4t0r39JASb&#xa;TM2gn3rYsjUDxZ9t5PdKqo+AV5rCr9MqE6Z/Dhm9xbgo3J2+yomRj0bdxI4J63NI&#xa;h0PsYGqn8V1BoUKXm1aAHWL2F5z/anjJVeXhNUSnDf3B50YyAIxVwlE4es1V++8G&#xa;3iQOd1KHWazARg2cfQxER5Bk0DYbcJSa5+ubRBf0Mk6uBJ5cdt1m7sb/FbJtgyBF&#xa;7OgbZw/W0xEPavnpmIIO3MxS6yxf5IzgNcV8hjpobtnrXIKf2gM=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">VMware</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">none@vmware.com</elem>
+<elem key="localityName">Palo Alto</elem>
+<elem key="organizationalUnitName">VMware</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">VMware</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">none@vmware.com</elem>
+<elem key="localityName">Palo Alto</elem>
+<elem key="organizationalUnitName">VMware</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B03690027AAE4B2C1FB37D531575D11A0503E5619EEDB0C16D3F97D0AC157EC2FCD3071C98E3882409123E40001A5EE74A02DF236F6936B2C71C95074254BB2B9A0EC19D006D7D3D80A012900787284FBBEEF62E5927B29672A44156D8CB7B27498888DD9A2D469F3250441DD4F43D5624DAF844E0F0EB544F5651ADA006848FA33521B24F26259D17727615FA183B169741D6952FE0F7C92F39DBBDAA6C5E8F792131F9A26D5BAE7A9732F7AA7A06C5FDBDC1432261B41E7B42519E413402980693237AA0A507D8058D5A9855C256A1088A4C5FFD51EB7CECC65026C4ABFAE1ADABCA99B9E3D75FAF5DF9CB43D0FECFAD10BF7768B1C7B86C5FFB413BBA619F</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">04:86:86:42:CF:FC:A0:FF:F3:36:44:3D:F5:77:EF:2C:66:F8:67:5C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:04:86:86:42:CF:FC:A0:FF:F3:36:44:3D:F5:77:EF:2C:66:F8:67:5C&#xa;DirName:/C=US/L=Palo Alto/OU=VMware/CN=VMware/emailAddress=none@vmware.com&#xa;serial:E5:AB:1F:89:21:A9:21:BC&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-04-08T15:06:06</elem>
+<elem key="notAfter">2021-04-08T15:06:06</elem>
+</table>
+<elem key="md5">ccae2c6e23bf79893e21f149787d5d2d</elem>
+<elem key="sha1">f9cf67b40ab6d9fd4aaf6fb926e6490afd46fe33</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEEjCCAvqgAwIBAgIJAOWrH4khqSG8MA0GCSqGSIb3DQEBCwUAMGMxCzAJBgNV&#xa;BAYTAlVTMRIwEAYDVQQHDAlQYWxvIEFsdG8xDzANBgNVBAsMBlZNd2FyZTEPMA0G&#xa;A1UEAwwGVk13YXJlMR4wHAYJKoZIhvcNAQkBFg9ub25lQHZtd2FyZS5jb20wHhcN&#xa;MjAwNDA4MTUwNjA2WhcNMjEwNDA4MTUwNjA2WjBjMQswCQYDVQQGEwJVUzESMBAG&#xa;A1UEBwwJUGFsbyBBbHRvMQ8wDQYDVQQLDAZWTXdhcmUxDzANBgNVBAMMBlZNd2Fy&#xa;ZTEeMBwGCSqGSIb3DQEJARYPbm9uZUB2bXdhcmUuY29tMIIBIjANBgkqhkiG9w0B&#xa;AQEFAAOCAQ8AMIIBCgKCAQEAsDaQAnquSywfs31TFXXRGgUD5WGe7bDBbT+X0KwV&#xa;fsL80wccmOOIJAkSPkAAGl7nSgLfI29pNrLHHJUHQlS7K5oOwZ0AbX09gKASkAeH&#xa;KE+77vYuWSeylnKkQVbYy3snSYiI3ZotRp8yUEQd1PQ9ViTa+ETg8OtUT1ZRraAG&#xa;hI+jNSGyTyYlnRdydhX6GDsWl0HWlS/g98kvOdu9qmxej3khMfmibVuuepcy96p6&#xa;BsX9vcFDImG0HntCUZ5BNAKYBpMjeqClB9gFjVqYVcJWoQiKTF/9Uet87MZQJsSr&#xa;+uGtq8qZuePXX69d+ctD0P7PrRC/d2ixx7hsX/tBO7phnwIDAQABo4HIMIHFMB0G&#xa;A1UdDgQWBBQEhoZCz/yg//M2RD31d+8sZvhnXDCBlQYDVR0jBIGNMIGKgBQEhoZC&#xa;z/yg//M2RD31d+8sZvhnXKFnpGUwYzELMAkGA1UEBhMCVVMxEjAQBgNVBAcMCVBh&#xa;bG8gQWx0bzEPMA0GA1UECwwGVk13YXJlMQ8wDQYDVQQDDAZWTXdhcmUxHjAcBgkq&#xa;hkiG9w0BCQEWD25vbmVAdm13YXJlLmNvbYIJAOWrH4khqSG8MAwGA1UdEwQFMAMB&#xa;Af8wDQYJKoZIhvcNAQELBQADggEBABVlyU3y54VPNYC0q0FlQZsE1k2ec6D/AsV+&#xa;uUuQne+T/8LszoyE3ANXrpki+PjLPMNNNBLsyhKF1vMn3jEqUBOzmw4t0r39JASb&#xa;TM2gn3rYsjUDxZ9t5PdKqo+AV5rCr9MqE6Z/Dhm9xbgo3J2+yomRj0bdxI4J63NI&#xa;h0PsYGqn8V1BoUKXm1aAHWL2F5z/anjJVeXhNUSnDf3B50YyAIxVwlE4es1V++8G&#xa;3iQOd1KHWazARg2cfQxER5Bk0DYbcJSa5+ubRBf0Mk6uBJ5cdt1m7sb/FbJtgyBF&#xa;7OgbZw/W0xEPavnpmIIO3MxS6yxf5IzgNcV8hjpobtnrXIKf2gM=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script><script id="vmware-version" output="&#xa;  Server version: VMware Workstation 16.1.0&#xa;  Build: 17198959&#xa;  Locale version: INTL  &#xa;  OS type: win32-x86&#xa;  Product Line ID: ws"><elem key="Server version">VMware Workstation 16.1.0</elem>
+<elem key="Build">17198959</elem>
+<elem key="Locale version">INTL  </elem>
+<elem key="OS type">win32-x86</elem>
+<elem key="Product Line ID">ws</elem>
+</script></port>
+</ports>
+<times srtt="139" rttvar="3775" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1616419034"/>
+<taskend task="NSE" time="1616419034"/>
+<taskbegin task="NSE" time="1616419034"/>
+<taskend task="NSE" time="1616419034"/>
+<taskbegin task="NSE" time="1616419034"/>
+<taskend task="NSE" time="1616419034"/>
+<runstats><finished time="1616419034" timestr="Mon Mar 22 09:17:14 2021" summary="Nmap done at Mon Mar 22 09:17:14 2021; 1 IP address (1 host up) scanned in 209.35 seconds" elapsed="209.35" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

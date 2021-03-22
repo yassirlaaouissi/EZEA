@@ -1,0 +1,28 @@
+# Nmap 7.91 scan initiated Mon Mar 22 09:16:36 2021 as: nmap -vv --reason -Pn -sV -p 60085 "--script=banner,(mongodb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/tcp_60085_mongodb_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/tcp_60085_mongodb_nmap.xml" 192.168.2.13
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up, received arp-response (0.00011s latency).
+Scanned at 2021-03-22 09:16:37 EDT for 0s
+
+PORT      STATE SERVICE REASON          VERSION
+60085/tcp open  unknown syn-ack ttl 128
+|_banner: {"type":"Tier1","version":"1.0"}
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions, Help, JavaRMI, LDAPBindReq, NULL, RPCCheck, RTSPRequest, TLSSessionReq, X11Probe, afp: 
+|_    {"type":"Tier1","version":"1.0"}
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port60085-TCP:V=7.91%I=7%D=3/22%Time=605898B5%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(HTTPOptions,2
+SF:2,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(RTSPRequest,22,"{\
+SF:"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(RPCCheck,22,"{\"type\":
+SF:\"Tier1\",\"version\":\"1\.0\"}\r\n")%r(Help,22,"{\"type\":\"Tier1\",\"
+SF:version\":\"1\.0\"}\r\n")%r(TLSSessionReq,22,"{\"type\":\"Tier1\",\"ver
+SF:sion\":\"1\.0\"}\r\n")%r(X11Probe,22,"{\"type\":\"Tier1\",\"version\":\
+SF:"1\.0\"}\r\n")%r(FourOhFourRequest,22,"{\"type\":\"Tier1\",\"version\":
+SF:\"1\.0\"}\r\n")%r(LDAPBindReq,22,"{\"type\":\"Tier1\",\"version\":\"1\.
+SF:0\"}\r\n")%r(JavaRMI,22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n"
+SF:)%r(afp,22,"{\"type\":\"Tier1\",\"version\":\"1\.0\"}\r\n");
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Mar 22 09:16:37 2021 -- 1 IP address (1 host up) scanned in 1.03 seconds

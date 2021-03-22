@@ -1,0 +1,15 @@
+[0;32m---------------------Recon Recommendations---------------------
+[0m
+[0m
+[0;33mWeb Servers Recon:
+[0m
+sslscan "192.168.2.13" | tee "recon/sslscan_192.168.2.13_443.txt"
+nikto -host "https://192.168.2.13:443" -ssl | tee "recon/nikto_192.168.2.13_443.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -elkx '' -u "https://192.168.2.13:443" -o "recon/gobuster_192.168.2.13_443.txt"
+
+nikto -host "http://192.168.2.13:5357" | tee "recon/nikto_192.168.2.13_5357.txt"
+gobuster dir -w /usr/share/wordlists/dirb/common.txt -t 30 -elkx '' -u "http://192.168.2.13:5357" -o "recon/gobuster_192.168.2.13_5357.txt"
+
+
+
+
