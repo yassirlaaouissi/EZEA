@@ -20,14 +20,14 @@ Tl;dr: I overachieved my selfmade OSCP Enum script.
 2. chmod +x all .sh files in the folder, and in the folders folders. And in the folders folders folders folders folders.
 3. Run the damn script:
 
-If bash is your standard shell:
+**If bash is your standard shell:**
 ```
 >$ ./runme.sh
 Please run as root
 Usage: sudo ./runme.sh <IP-Address>
 ```
 
-If ZSH is your standard shell:
+**If ZSH is your standard shell:**
 ```
 >$ bash ./runme.sh
 Please run as root
