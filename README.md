@@ -28,8 +28,27 @@ Usage: sudo ./runme.sh <IP-Address>
 ```
 
 **If ZSH is your standard shell:**
+You have to change your default shell to bash first, else tmux wont recognize bash.
+Use the following commands provided by our good friend @pr0b3r7:
+1. This command will find the path to bash:
 ```
->$ bash ./runme.sh
+>$ type -a bash 
+> bash is /usr/bin/bash
+> bash is /bin/bash
+```
+2. This command will change your default shell to bash:
+```
+>$ chsh -s /bin/bash
+```
+3. Verify your shell has indeed been changed to /bin/bash:
+```
+>$ grep "^${USER}" /etc/passwd
+> kali:x:1000:1000:kali,,,:/home/kali:/bin/bash
+```
+4. Finally reboot and run the script again:
+
+```
+>$  ./runme.sh
 Please run as root
 Usage: sudo ./runme.sh <IP-Address>
 ```
