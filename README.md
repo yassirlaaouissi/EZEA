@@ -20,14 +20,15 @@ Tl;dr: I overachieved my selfmade OSCP Enum script.
 2. chmod +x all .sh files in the folder, and in the folders folders. And in the folders folders folders folders folders.
 3. The following steps are depending on the type of shell you are running. At the time of this writing old kali has bash, new kali has ZSH. This script is based on bash so please check which shell you have. Based on that follow the steps below:
 
-**If bash is your standard shell:**
+## If bash is your standard shell
+Just run the damn command you fool, why did you not update your kali :(
 ```
 >$ ./runme.sh
 Please run as root
 Usage: sudo ./runme.sh <IP-Address>
 ```
 
-**If ZSH is your standard shell:**
+## If ZSH is your standard shell
 
 You have to change your default shell to bash first, else tmux wont recognize bash.
 Use the following commands provided by our good friend @pr0b3r7:
