@@ -49,7 +49,7 @@ Submodule path 'resources/dirsearch': checked out 'ae36ca7c4d3799c2fffb6a374248c
 2. chmod +x all .sh files in the folder, and in the folders folders. And in the folders folders folders folders folders.
 3. The following steps are depending on the type of shell you are running. At the time of this writing old kali has bash, new kali has ZSH. This script is based on bash so please check which shell you have. Based on that follow the steps below:
 
-## If bash is your standard shell
+## Execution
 
 see the example down below
 
