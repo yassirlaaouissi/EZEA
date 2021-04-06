@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$EUID" -ne 0 ]
 	then 	
@@ -7,7 +7,7 @@ if [ "$EUID" -ne 0 ]
 else
 	if [ $# -eq 1 ]
   		then
-    			sudo tilix --focus-window --maximize -x "./enum.sh $1"
+    			sudo tilix --focus-window --maximize -x "/usr/bin/env bash -c './enum.sh $1'"
 	else
         	echo "No arguments supplied"
        		echo "Usage: sudo ./runme.sh <IP-Address>"
