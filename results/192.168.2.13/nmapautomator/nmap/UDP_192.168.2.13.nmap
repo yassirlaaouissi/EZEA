@@ -1,7 +1,0 @@
-# Nmap 7.91 scan initiated Mon Mar 22 09:15:41 2021 as: /usr/bin/nmap -Pn -sU --max-retries 1 --open --open -oN nmap/UDP_192.168.2.13.nmap --system-dns --stats-every 3s 192.168.2.13
-Nmap scan report for desktop-nromt5i.home (192.168.2.13)
-Host is up (0.00017s latency).
-All 1000 scanned ports on desktop-nromt5i.home (192.168.2.13) are open|filtered
-MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
-
-# Nmap done at Mon Mar 22 09:16:03 2021 -- 1 IP address (1 host up) scanned in 21.38 seconds

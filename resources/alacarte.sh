@@ -127,7 +127,7 @@ call_option() {
 		#dir enum
 		$dir_http|"dir_http")
 			echo -e "${GREEN}${BOLD}===== Running dirsearch =====${NONE}\n"
-			cmd="python3 $(locate -b "dirsearch.py" | head -n 1) -R 3 -u http://$targetIP -e php,txt,html,asp"
+			cmd="python3 resources/dirsearch/dirsearch.py -u http://$targetIP -e php,txt,html,asp"
 			echo -e "${RED}${BOLD}$cmd\n${NONE}"
 			$cmd
 			echo ""
@@ -148,7 +148,7 @@ call_option() {
 		#HTTPS
 		$dir_https|"dir_https")
 			echo -e "${GREEN}${BOLD}===== Running dirsearch =====${NONE}\n"
-			cmd="python3 $(find / -name "dirsearch.py" -type f 2>/dev/null -print -quit) -u https://$targetIP -e php,txt,html,asp"
+			cmd="python3 resources/dirsearch/dirsearch.py -u https://$targetIP -e php,txt,html,asp"
 			echo -e "${RED}${BOLD}$cmd\n${NONE}"
 			$cmd
 			echo ""
