@@ -4,14 +4,14 @@ this is a fork of the original project from [yassirlaaouissi/EZEA](https://githu
 
 # Brief explanation
 This tool is called EZEA (EaZy Enum Automator), and was made for OSCP. This tool uses bash, tilix and tmux to automate most of the enumeration proces.
-This tool uses some already wonderfull enumeration automators and some of my own commands. Bundles them in a toolkit and splits all terminals into terminal tiles. 
+This tool uses some already wonderfull enumeration automators and some of my own commands, bundles them in a toolkit, and splits all terminals into terminal tiles. 
 
 Tl;dr: I overachieved my selfmade OSCP Enum script.
 
 # Requirements
 - Tilix
 - Tmux
-- bash or ZSH (Kali 2021 uses ZSH)
+- bash
 - Python3
 - The following python3 modules
   - `sudo python3 -m pip install -r resources/dirsearch/requirements.txt`
@@ -46,8 +46,9 @@ Submodule path 'resources/dirsearch': checked out 'ae36ca7c4d3799c2fffb6a374248c
 
 # How to use?
 1. Download this repo
-2. chmod +x all .sh files in the folder, and in the folders folders. And in the folders folders folders folders folders.
-3. The following steps are depending on the type of shell you are running. At the time of this writing old kali has bash, new kali has ZSH. This script is based on bash so please check which shell you have. Based on that follow the steps below:
+2. chmod +x all .sh files in the folder, and in the folders folders. And in the folders folders folders ad neuseum
+3. run the script
+4. profit?
 
 ## Execution
 
@@ -60,7 +61,7 @@ Usage: sudo ./runme.sh <IP-Address>
 ```
 
 It will open some terminal windows, depending on your resources it will run ~30/40 minutes.
-After all this hassle it will post the results to the results/<IP-address> folder.
+After all the hassle it will post the results to the results/<IP-address> folder.
 
 
 # To-do
