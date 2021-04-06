@@ -1,7 +1,3 @@
-# INFO
-
-this is a fork of the original project from [yassirlaaouissi/EZEA](https://github.com/yassirlaaouissi/EZEA) to which I have made some changes.
-
 # Brief explanation
 This tool is called EZEA (EaZy Enum Automator), and was made for OSCP. This tool uses bash, tilix and tmux to automate most of the enumeration proces.
 This tool uses some already wonderfull enumeration automators and some of my own commands, bundles them in a toolkit, and splits all terminals into terminal tiles. 
@@ -52,7 +48,7 @@ Submodule path 'resources/dirsearch': checked out 'ae36ca7c4d3799c2fffb6a374248c
 
 ## Execution
 
-see the example down below
+See the example down below
 
 ```
 >$ ./runme.sh
