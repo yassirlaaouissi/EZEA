@@ -1,3 +1,0 @@
-[submodule "resources/dirsearch"]
-	path = resources/dirsearch
-	url = git://github.com/maurosoria/dirsearch.git
