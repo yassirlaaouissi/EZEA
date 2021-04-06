@@ -9,6 +9,8 @@ Tl;dr: I overachieved my selfmade OSCP Enum script.
 - Tmux
 - bash or ZSH (Kali 2021 uses ZSH)
 - Python3
+- module named lib
+  - `python3 -m pip install lib`   
 - The following enumeration script (big upvote to the creators):
   + https://github.com/4ut0m4t0n/alacarte
   + https://github.com/Tib3rius/AutoRecon
