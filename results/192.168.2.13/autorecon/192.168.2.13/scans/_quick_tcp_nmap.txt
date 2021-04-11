@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Sun Apr 11 08:08:41 2021 as: nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_quick_tcp_nmap.xml" 192.168.2.13

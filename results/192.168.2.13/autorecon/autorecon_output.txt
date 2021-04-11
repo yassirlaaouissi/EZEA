@@ -1,0 +1,64 @@
+[32m[[1m*[22m][39m Scanning target [33m[1m192.168.2.13[22m[39m
+[32m[[1m*[22m][39m Running service detection [32m[1mnmap-quick[22m[39m on [33m[1m192.168.2.13[22m[39m with [34m[1mnmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_quick_tcp_nmap.xml" 192.168.2.13[22m[39m
+[32m[[1m*[22m][39m Running service detection [32m[1mnmap-full-tcp[22m[39m on [33m[1m192.168.2.13[22m[39m with [34m[1mnmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_full_tcp_nmap.xml" 192.168.2.13[22m[39m
+[32m[[1m*[22m][39m Running service detection [32m[1mnmap-top-20-udp[22m[39m on [33m[1m192.168.2.13[22m[39m with [34m[1mnmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_top_20_udp_nmap.xml" 192.168.2.13[22m[39m
+[31m[[1m-[22m][39m [31m[[1m192.168.2.13 nmap-quick[22m] [39mHost discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+[31m[[1m-[22m][39m [31m[[1m192.168.2.13 nmap-full-tcp[22m] [39mHost discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+[31m[[1m-[22m][39m [31m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mHost discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mStarting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mStarting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mStarting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mNSE: Loaded 153 scripts for scanning.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mNSE: Script Pre-scanning.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mNSE: Starting runlevel 1 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mNSE: Starting runlevel 2 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mNSE: Starting runlevel 3 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mInitiating ARP Ping Scan at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mScanning 192.168.2.13 [1 port]
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mCompleted ARP Ping Scan at 08:08, 0.05s elapsed (1 total hosts)
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mInitiating Parallel DNS resolution of 1 host. at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mCompleted Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mInitiating SYN Stealth Scan at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mScanning desktop-nromt5i.home (192.168.2.13) [1000 ports]
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-quick[22m] [39mDiscovered open port 443/tcp on 192.168.2.13
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mNSE: Loaded 153 scripts for scanning.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mNSE: Script Pre-scanning.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mNSE: Starting runlevel 1 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mNSE: Starting runlevel 2 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mNSE: Starting runlevel 3 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mNSE: Loaded 153 scripts for scanning.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mNSE: Script Pre-scanning.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mNSE: Starting runlevel 1 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mNSE: Starting runlevel 2 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mNSE: Starting runlevel 3 (of 3) scan.
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mInitiating NSE at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mCompleted NSE at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mInitiating ARP Ping Scan at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mInitiating ARP Ping Scan at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mScanning 192.168.2.13 [1 port]
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mScanning 192.168.2.13 [1 port]
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mCompleted ARP Ping Scan at 08:08, 0.19s elapsed (1 total hosts)
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mCompleted ARP Ping Scan at 08:08, 0.20s elapsed (1 total hosts)
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mInitiating Parallel DNS resolution of 1 host. at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mInitiating Parallel DNS resolution of 1 host. at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mCompleted Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-top-20-udp[22m] [39mInitiating UDP Scan at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mCompleted Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mInitiating SYN Stealth Scan at 08:08
+[34m[[1m-[22m][39m [34m[[1m192.168.2.13 nmap-full-tcp[22m] [39mScanning desktop-nromt5i.home (192.168.2.13) [65535 ports]

@@ -1,0 +1,12 @@
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times will be slower.
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+Stats: 0:00:06 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 33.33% done; ETC: 08:09 (0:00:12 remaining)
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 33.33% done; ETC: 08:09 (0:00:22 remaining)
+Stats: 0:00:12 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 66.67% done; ETC: 08:09 (0:00:06 remaining)
+Stats: 0:00:17 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 66.67% done; ETC: 08:09 (0:00:09 remaining)
+Stats: 0:00:22 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 66.67% done; ETC: 08:09 (0:00:11 remaining)

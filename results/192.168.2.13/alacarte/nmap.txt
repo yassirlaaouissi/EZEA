@@ -1,0 +1,75 @@
+[01;33m
+          _                                        
+  \      | |                              _         
+ _____   | | _____     ____ _____  ____ _| |_ _____ 
+(____ |  | |(____ |   / ___|____ |/ ___|_   _) ___ |
+/ ___ |  | |/ ___ |  ( (___/ ___ | |     | |_| ____|
+\ ____|   \_)_____|   \____)_____|_|      \__)_____)
+[01;90mAuthor: 4UT0M4T0N[00m
+
+Target has been set as 192.168.2.13
+
+[01;32m[1m===== Running Quick Nmap TCP CONNECT scan ======[00m
+[01;31m[1mnmap -sT -Pn --top-ports 100 -T4 --reason -v 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+Initiating Parallel DNS resolution of 1 host. at 08:08
+Completed Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+Initiating Connect Scan at 08:08
+Scanning desktop-nromt5i.home (192.168.2.13) [100 ports]
+Discovered open port 443/tcp on 192.168.2.13
+Discovered open port 5357/tcp on 192.168.2.13
+Completed Connect Scan at 08:08, 2.61s elapsed (100 total ports)
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up, received user-set (0.00063s latency).
+Not shown: 98 filtered ports
+Reason: 98 no-responses
+PORT     STATE SERVICE REASON
+443/tcp  open  https   syn-ack
+5357/tcp open  wsdapi  syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 2.68 seconds
+
+[01;32m[1m===== Running Nmap UDP scan ======[00m
+[01;31m[1mnmap -sU -Pn --top-ports 100 -T4 -v 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+Initiating ARP Ping Scan at 08:08
+Scanning 192.168.2.13 [1 port]
+Completed ARP Ping Scan at 08:08, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:08
+Completed Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+Initiating UDP Scan at 08:08
+Scanning desktop-nromt5i.home (192.168.2.13) [100 ports]
+Completed UDP Scan at 08:08, 3.06s elapsed (100 total ports)
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.000095s latency).
+All 100 scanned ports on desktop-nromt5i.home (192.168.2.13) are open|filtered
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 3.25 seconds
+           Raw packets sent: 201 (11.262KB) | Rcvd: 26 (1.416KB)
+
+[01;32m[1m===== Running Full Nmap TCP CONNECT scan ======[00m
+[01;31m[1mnmap -sT -Pn -A -p- -T4 -v 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+NSE: Loaded 153 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Initiating ARP Ping Scan at 08:08
+Scanning 192.168.2.13 [1 port]
+Completed ARP Ping Scan at 08:08, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:08
+Completed Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+Initiating Connect Scan at 08:08
+Scanning desktop-nromt5i.home (192.168.2.13) [65535 ports]
+Discovered open port 443/tcp on 192.168.2.13
+Connect Scan Timing: About 23.85% done; ETC: 08:10 (0:01:39 remaining)

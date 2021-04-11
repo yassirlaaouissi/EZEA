@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sun Apr 11 08:08:42 2021 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN &quot;/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_full_tcp_nmap.txt&quot; -oX &quot;/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_full_tcp_nmap.xml&quot; 192.168.2.13 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN &quot;/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/_full_tcp_nmap.txt&quot; -oX &quot;/home/kali/Desktop/Self written scripts/EZEA/results/192.168.2.13/autorecon/192.168.2.13/scans/xml/_full_tcp_nmap.xml&quot; 192.168.2.13" start="1618142922" startstr="Sun Apr 11 08:08:42 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1618142922"/>
+<taskend task="NSE" time="1618142922"/>
+<taskbegin task="NSE" time="1618142922"/>
+<taskend task="NSE" time="1618142922"/>
+<taskbegin task="NSE" time="1618142922"/>
+<taskend task="NSE" time="1618142922"/>
+<taskbegin task="ARP Ping Scan" time="1618142922"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.13" addrtype="ipv4"/>
+<address addr="C8:D9:D2:EA:EE:6B" addrtype="mac" vendor="Hewlett Packard"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="ARP Ping Scan" time="1618142923" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1618142923"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1618142923"/>
+<taskbegin task="SYN Stealth Scan" time="1618142923"/>

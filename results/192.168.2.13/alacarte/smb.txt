@@ -1,0 +1,188 @@
+[01;33m
+          _                                        
+  \      | |                              _         
+ _____   | | _____     ____ _____  ____ _| |_ _____ 
+(____ |  | |(____ |   / ___|____ |/ ___|_   _) ___ |
+/ ___ |  | |/ ___ |  ( (___/ ___ | |     | |_| ____|
+\ ____|   \_)_____|   \____)_____|_|      \__)_____)
+[01;90mAuthor: 4UT0M4T0N[00m
+
+Target has been set as 192.168.2.13
+
+[01;32m[1m===== Running nbtscan =====[00m
+
+[01;31m[1mnbtscan -r 192.168.2.13
+[00m
+Doing NBT name scan for addresses from 192.168.2.13
+
+IP address       NetBIOS Name     Server    User             MAC address      
+------------------------------------------------------------------------------
+192.168.2.13     DESKTOP-NROMT5I  <server>  <unknown>        c8:d9:d2:ea:ee:6b
+
+[01;32m[1m===== Running nmap smb-os-discovery =====[00m
+
+[01;31m[1mnmap -Pn -v -p 139,445 --script=smb-os-discovery 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Initiating ARP Ping Scan at 08:08
+Scanning 192.168.2.13 [1 port]
+Completed ARP Ping Scan at 08:08, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:08
+Completed Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+Initiating SYN Stealth Scan at 08:08
+Scanning desktop-nromt5i.home (192.168.2.13) [2 ports]
+Completed SYN Stealth Scan at 08:08, 1.28s elapsed (2 total ports)
+NSE: Script scanning 192.168.2.13.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.00013s latency).
+
+PORT    STATE    SERVICE
+139/tcp filtered netbios-ssn
+445/tcp filtered microsoft-ds
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.97 seconds
+           Raw packets sent: 5 (204B) | Rcvd: 9 (396B)
+
+[01;32m[1m===== Running nmap smb-protocols =====[00m
+
+[01;31m[1mnmap -Pn -v -p139,445 --script=smb-protocols 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Initiating ARP Ping Scan at 08:08
+Scanning 192.168.2.13 [1 port]
+Completed ARP Ping Scan at 08:08, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:08
+Completed Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+Initiating SYN Stealth Scan at 08:08
+Scanning desktop-nromt5i.home (192.168.2.13) [2 ports]
+Completed SYN Stealth Scan at 08:08, 1.24s elapsed (2 total ports)
+NSE: Script scanning 192.168.2.13.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.0015s latency).
+
+PORT    STATE    SERVICE
+139/tcp filtered netbios-ssn
+445/tcp filtered microsoft-ds
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.58 seconds
+           Raw packets sent: 5 (204B) | Rcvd: 10 (565B)
+
+[01;32m[1m===== Running nmap smb vuln scripts =====[00m
+
+[01;31m[1mnmap -Pn -v -p 139,445 --script=smb-vuln* 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+NSE: Loaded 11 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Initiating ARP Ping Scan at 08:08
+Scanning 192.168.2.13 [1 port]
+Completed ARP Ping Scan at 08:08, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 08:08
+Completed Parallel DNS resolution of 1 host. at 08:08, 0.00s elapsed
+Initiating SYN Stealth Scan at 08:08
+Scanning desktop-nromt5i.home (192.168.2.13) [2 ports]
+Completed SYN Stealth Scan at 08:08, 1.25s elapsed (2 total ports)
+NSE: Script scanning 192.168.2.13.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.00056s latency).
+
+PORT    STATE    SERVICE
+139/tcp filtered netbios-ssn
+445/tcp filtered microsoft-ds
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+NSE: Script Post-scanning.
+Initiating NSE at 08:08
+Completed NSE at 08:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.72 seconds
+           Raw packets sent: 5 (204B) | Rcvd: 13 (703B)
+
+[01;32m[1m===== Running nmap smb enum scripts =====[00m
+
+[01;31m[1mnmap -Pn -p 139,445 --script=smb-enum* 192.168.2.13
+[00m
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-11 08:08 EDT
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.00022s latency).
+
+PORT    STATE    SERVICE
+139/tcp filtered netbios-ssn
+445/tcp filtered microsoft-ds
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.79 seconds
+
+[01;32m[1m===== Enumerating host with smbmap =====
+[00m
+[01;31m[1msmbmap -H 192.168.2.13
+[00m
+
+[01;32m[1m===== Listing shares with smbclient =====[00m
+
+[01;31m[1msmbclient -L //192.168.2.13 -N
+[00m
+
+[01;32m[1m===== Running enum4linux =====[00m
+
+[01;31m[1menum4linux -a 192.168.2.13
+[00m
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Apr 11 08:08:54 2021
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 192.168.2.13
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ==================================================== 
+|    Enumerating Workgroup/Domain on 192.168.2.13    |
+ ==================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================ 
+|    Nbtstat Information for 192.168.2.13    |
+ ============================================ 
+Looking up status of 192.168.2.13
+	DESKTOP-NROMT5I <20> -         B <ACTIVE>  File Server Service
+	DESKTOP-NROMT5I <00> -         B <ACTIVE>  Workstation Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+
+	MAC Address = C8-D9-D2-EA-EE-6B
+
+ ===================================== 
+|    Session Check on 192.168.2.13    |
+ ===================================== 
+[E] Server doesn't allow session using username '', password ''.  Aborting remainder of tests.
+
+

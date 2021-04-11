@@ -1,0 +1,1 @@
+# Nmap 7.91 scan initiated Sun Apr 11 08:08:47 2021 as: /usr/bin/nmap -Pn -sCV -p443,903,5357 --open -oN nmap/Script_192.168.2.13.nmap --system-dns --stats-every 2s 192.168.2.13

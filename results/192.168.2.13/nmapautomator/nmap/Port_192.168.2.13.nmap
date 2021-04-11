@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Sun Apr 11 08:08:42 2021 as: /usr/bin/nmap -Pn -T4 --max-retries 1 --max-scan-delay 20 --open -oN nmap/Port_192.168.2.13.nmap --system-dns --stats-every 1s 192.168.2.13
+Nmap scan report for desktop-nromt5i.home (192.168.2.13)
+Host is up (0.00015s latency).
+Not shown: 997 filtered ports
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE
+443/tcp  open  https
+903/tcp  open  iss-console-mgr
+5357/tcp open  wsdapi
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+# Nmap done at Sun Apr 11 08:08:47 2021 -- 1 IP address (1 host up) scanned in 5.13 seconds

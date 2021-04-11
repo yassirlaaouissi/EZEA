@@ -1,0 +1,60 @@
+
+[0;33mRunning all scans on [0m192.168.2.13
+[0m
+[0;33mNo ping detected.. Will not use ping scans!
+[0m
+[0m
+[0;32mHost is likely running Unknown OS!
+
+
+[0;32m---------------------Starting Port Scan-----------------------
+[0m
+In progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2AIn progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2AIn progress: SYN Stealth Scan (0:00:02 elapsed - 0:00:21 remaining)   
+[########>                                                                                            ] 8% done   
+[2AIn progress: SYN Stealth Scan (0:00:03 elapsed - 0:00:07 remaining)   
+[############################>                                                                        ] 28% done   
+[2AIn progress: SYN Stealth Scan (0:00:04 elapsed - 0:00:02 remaining)   
+[###################################################################>                                 ] 67% done   
+[2A[0K
+[0K
+PORT     STATE SERVICE
+443/tcp  open  https
+903/tcp  open  iss-console-mgr
+5357/tcp open  wsdapi
+MAC Address: C8:D9:D2:EA:EE:6B (Hewlett Packard)
+
+
+
+[0;32m---------------------Starting Script Scan-----------------------
+[0m
+In progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2AIn progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2AIn progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2AIn progress: No Scan (0:00:00 elapsed - 0:00:00 remaining)   
+[#>                                                                                                    ] 0% done   
+[2AIn progress: Service Scan (0:00:06 elapsed - 0:00:12 remaining)   
+[#################################>                                                                   ] 33% done   
+[2AIn progress: Service Scan (0:00:06 elapsed - 0:00:12 remaining)   
+[#################################>                                                                   ] 33% done   
+[2AIn progress: Service Scan (0:00:11 elapsed - 0:00:22 remaining)   
+[#################################>                                                                   ] 33% done   
+[2AIn progress: Service Scan (0:00:12 elapsed - 0:00:06 remaining)   
+[##################################################################>                                  ] 66% done   
+[2AIn progress: Service Scan (0:00:12 elapsed - 0:00:06 remaining)   
+[##################################################################>                                  ] 66% done   
+[2AIn progress: Service Scan (0:00:17 elapsed - 0:00:09 remaining)   
+[##################################################################>                                  ] 66% done   
+[2AIn progress: Service Scan (0:00:17 elapsed - 0:00:09 remaining)   
+[##################################################################>                                  ] 66% done   
+[2AIn progress: Service Scan (0:00:17 elapsed - 0:00:09 remaining)   
+[##################################################################>                                  ] 66% done   
+[2AIn progress: Service Scan (0:00:22 elapsed - 0:00:11 remaining)   
+[##################################################################>                                  ] 66% done   
+[2A
