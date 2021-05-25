@@ -7,7 +7,8 @@ if [ "$EUID" -ne 0 ]
 else
 	if [ $# -eq 1 ]
   		then
-    			sudo tilix --focus-window --maximize -x "/usr/bin/env bash -c './enum.sh $1'"
+    			dconf load /com/gexperts/Tilix/ < tilix.dconf
+			sudo tilix --focus-window --maximize -x "/usr/bin/env bash -c './enum.sh $1'"
 	else
         	echo "No arguments supplied"
        		echo "Usage: sudo ./runme.sh <IP-Address>"

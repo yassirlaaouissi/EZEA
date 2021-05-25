@@ -5,46 +5,43 @@ This tool uses some already wonderfull enumeration automators and some of my own
 Tl;dr: I overachieved my selfmade OSCP Enum script.
 
 # Requirements
-- Tilix
-- Tmux
-- bash
-- Python3
-- The following python3 modules
-  - `sudo python3 -m pip install -r resources/dirsearch/requirements.txt`
-- The following enumeration script (big upvote to the creators):
-  + https://github.com/4ut0m4t0n/alacarte
-  + https://github.com/Tib3rius/AutoRecon
-  + https://github.com/21y4d/nmapAutomator
-- Preferably a kali environment
-- git
+- Everything that is in autoinstall.sh
 
-# Installing dependencies
+# Installing 
 
 The code within this project relies on the code present within [maurosaria/dirsearch](https://github.com/maurosoria/dirsearch/tree/v0.4.0) to function.
 To install the required dependencies the following steps can be followed:
 
-### initialising
+## Automatic
 
 ```
-EZEA git/master  
-% git submodule init                                                             
-Submodule 'resources/dirsearch' (git://github.com/maurosoria/dirsearch.git) registered for path 'resources/dirsearch'
-```
-
-### Pulling in code
+$ pwd
+~/EZEA
+$ sudo ./autoinstall.sh
+$ sudo ./runme.sh <IP-address>
 
 ```
-EZEA git/master  
-% git submodule update
-Cloning into '/path/to/project/resources/dirsearch'...
-Submodule path 'resources/dirsearch': checked out 'ae36ca7c4d3799c2fffb6a374248c2a974362b2b'
+## Manual
 ```
+$ pwd
+~/EZEA
+$ sudo git submodule init
+$ sudo git submodule update
+$ sudo apt install tilix python3 python3-pip dconf-cli dbus-x11
+$ sudo python3 -m pip install -r resources/dirsearch/requirements.txt
+$ sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
+$ cat /etc/shells
+$ sudo chmod +x .
+$ sudo ./runme.sh <IP-address>
+
+```
+
 
 # How to use?
 1. Download this repo
-2. chmod +x all .sh files in the folder, and in the folders folders. And in the folders folders folders ad neuseum
-3. run the script
-4. profit?
+2. Install all the dependencies as listed above
+3. Run the script
+4. Profit?
 
 ## Execution
 
